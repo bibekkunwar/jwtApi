@@ -1,0 +1,26 @@
+<h1 class="margin">Welcome</h1>
+
+ <form class="d-flex align-items-center justify-content-center form-horizontal" #login = "ngForm" (ngSubmit)="userLogin(login.value)" style="text-align: center;">
+  <div class="form-group" style="text-align: center; width: 50%;">
+    <label for="email">username/ Email Address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="username" ngModel>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" ngModel>
+  </div>
+  <button type="ngSubmit" class="btn btn-primary" >Submit</button>
+</form>
+
+<div class="margin">
+<h2>all blog here</h2>
+<p *ngFor="let item of postsvalue">
+  {{item.id}}
+  title: {{item.blog_title}}
+</p>
+
+</div>
+
+
+
+
